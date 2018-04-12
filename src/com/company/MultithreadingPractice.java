@@ -9,15 +9,15 @@ public class MultithreadingPractice {
     }
 
     public void doJob(){
-        Thread thread1 = new Thread(() -> {
+        Thread thread = new Thread(() -> {
             for (int i = 0; i < 1000; i++){
                 counter++;
             }
         });
-        thread1.start();
+        thread.start();
 
         try{
-            thread1.join();
+            thread.join();
         }catch (InterruptedException ex){
             ex.printStackTrace();
         }
