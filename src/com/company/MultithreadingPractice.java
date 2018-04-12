@@ -10,7 +10,7 @@ public class MultithreadingPractice {
 
     public void doJob(){
         Thread thread = new Thread(() -> {
-            for (int i = 0; i < 1000; i++){
+            for (int i = 0; i < 10000; i++){
                 counter++;
             }
         });
