@@ -1,7 +1,8 @@
 package com.company;
 
 public class MultithreadingPractice {
-    private int counter;
+    private int mainCounter;
+
 
     public static void main(String[] args) {
         // hey
@@ -12,7 +13,7 @@ public class MultithreadingPractice {
     public void doJob(){
         Thread thread = new Thread(() -> {
             for (int i = 0; i < 10000; i++){
-                counter++;
+                mainCounter++;
             }
         });
         thread.start();
@@ -23,6 +24,6 @@ public class MultithreadingPractice {
             ex.printStackTrace();
         }
 
-        System.out.println(counter);
+        System.out.println(mainCounter);
     }
 }
