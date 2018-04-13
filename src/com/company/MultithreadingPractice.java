@@ -10,16 +10,20 @@ public class MultithreadingPractice {
 	    mp.doWork();
     }
 
+    public synchronized void increment(){
+        mainCounter++;
+    }
+
     public void doWork(){
         Thread thread1 = new Thread(() -> {
             for (int i = 0; i < 10000; i++){
-                mainCounter++;
+                increment();
             }
         });
 
         Thread thread2 = new Thread(() -> {
            for(int i = 0; i < 10000; i++){
-               mainCounter++;
+               increment();
            }
         });
 
