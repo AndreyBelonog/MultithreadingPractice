@@ -6,7 +6,7 @@ public class MultithreadingPractice {
     private AtomicInteger ourCounter = new AtomicInteger();
 
     public static void main(String[] args) {
-        // hey
+        // hey1
 	    MultithreadingPractice mp = new MultithreadingPractice();
 	    mp.doWork();
     }
