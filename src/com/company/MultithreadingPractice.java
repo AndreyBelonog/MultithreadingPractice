@@ -3,7 +3,7 @@ package com.company;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class MultithreadingPractice {
-    private AtomicInteger mainCounter = new AtomicInteger();
+    private AtomicInteger ourCounter = new AtomicInteger();
 
     public static void main(String[] args) {
         // hey
@@ -12,7 +12,7 @@ public class MultithreadingPractice {
     }
 
     public void increment(){
-        mainCounter.getAndIncrement();
+        ourCounter.getAndIncrement();
     }
 
     public void doWork(){
@@ -38,6 +38,6 @@ public class MultithreadingPractice {
             ex.printStackTrace();
         }
 
-        System.out.println(mainCounter);
+        System.out.println(ourCounter);
     }
 }
