@@ -1,8 +1,9 @@
 package com.company;
 
-public class MultithreadingPractice {
-    private int mainCounter;
+import java.util.concurrent.atomic.AtomicInteger;
 
+public class MultithreadingPractice {
+    private AtomicInteger mainCounter = new AtomicInteger();
 
     public static void main(String[] args) {
         // hey
@@ -10,8 +11,8 @@ public class MultithreadingPractice {
 	    mp.doWork();
     }
 
-    public synchronized void increment(){
-        mainCounter++;
+    public void increment(){
+        mainCounter.getAndIncrement();
     }
 
     public void doWork(){
