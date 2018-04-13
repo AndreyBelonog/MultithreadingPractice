@@ -7,10 +7,10 @@ public class MultithreadingPractice {
     public static void main(String[] args) {
         // hey
 	    MultithreadingPractice mp = new MultithreadingPractice();
-	    mp.doJob();
+	    mp.doWork();
     }
 
-    public void doJob(){
+    public void doWork(){
         Thread thread = new Thread(() -> {
             for (int i = 0; i < 10000; i++){
                 mainCounter++;
